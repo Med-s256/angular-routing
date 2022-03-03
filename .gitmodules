@@ -1,0 +1,3 @@
+[submodule "angular-routing"]
+	path = angular-routing
+	url = https://github.com/Med-s256/angular-routing.git

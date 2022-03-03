@@ -1,0 +1,52 @@
+<body>
+
+{{fulltext | uppercase}}
+<br>
+{{fulltext | lowercase}}
+<br>
+{{fulltext | titlecase}}
+<br>
+{{fulltext | slice: 8}}
+<br>
+{{fulltext |  slice: 8:10}}
+<br>
+
+<!-- <p *ngFor="let i of conteur(); let c= index">{{fulltext | slice :0:c}}</p> -->
+{{numero}}
+<br>
+{{numero | number: '2.4'}}
+<br>
+{{numero | number: '1.2-4'}}
+<br>
+{{numero | currency}}
+<!-- gerer les dates -->
+<br>
+{{date}}<br/>
+{{date | date: 'short'}}
+<br/>
+{{date | date: 'shortDate'}}
+<br/>
+{{date | date: 'shortTime'}}
+<br>
+<br/>
+{{date | date: 'medium'}}
+<br>
+
+<input class="btn btn-light" placeholder="search" [(ngModel)]="filterdata">
+<table style="border: 1px solid">
+  <thead>
+  <tr>
+  <th>id</th>
+  <th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let i of list | ourpipe: filterdata ">
+  <td>{{i.id}}</td>
+  <td>{{i.fname}}</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+
